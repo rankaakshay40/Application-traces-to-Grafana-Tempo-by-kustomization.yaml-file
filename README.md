@@ -43,6 +43,9 @@ Now after making all the changes:
    
 
 
+Reference links
+https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/otlphttpexporter/README.md
 
+https://medium.com/incerto-technologies/simple-opentelemetry-setup-in-a-kubernetes-environment-aa7dc3e3fcf9
 
 
