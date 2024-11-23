@@ -47,6 +47,8 @@ Now after making all the changes:
 
    changing the service to ClusteIP
 
+   changing the otel collector image from otel/otel-collector:0.33.0 to otel/otel-collector-k8s
+
    Adding the container port 4318 also in the otel-collector deployment.yaml
 
    and changing the port of grafana tempo from 3200 to 4318
