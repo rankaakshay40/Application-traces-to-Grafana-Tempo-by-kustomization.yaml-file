@@ -14,6 +14,11 @@ exporters:
   otlphttp:
     endpoint: http://10.132.143.56:4318
 
+  prometheusremotewrite:
+    endpoint: http://10.132.143.56:9090/api/v1/write # Make sure to specify the port.
+    remote_write_queue:
+      num_consumers: 20
+      queue_size: 20000
       
 service:
   pipelines:
@@ -24,7 +29,7 @@ service:
     metrics:
       receivers: [otlp]
       processors: [batch]
-      exporters: [logging]
+      exporters: [logging, prometheusremotewrite]
     logs:
       receivers: [otlp]
       processors: [batch]
