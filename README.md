@@ -40,10 +40,21 @@ Now after making all the changes:
    Now curl 127.0.0.1:8000/docs to see the apllication giving the traces on console and
 
    go to grafana explore and see the traces coming
+
+
+
+   Key changes made by me:
+
+   changing the service to ClusteIP
+
+   Adding the container port 4318 also in the otel-collector deployment.yaml
+
+   and changing the port of grafana tempo from 3200 to 4318
    
 
 
 Reference links
+
 https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/otlphttpexporter/README.md
 
 https://medium.com/incerto-technologies/simple-opentelemetry-setup-in-a-kubernetes-environment-aa7dc3e3fcf9
