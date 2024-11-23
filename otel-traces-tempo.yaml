@@ -1,0 +1,33 @@
+receivers:
+  otlp:
+    protocols:
+      grpc: 
+      http:     
+      
+processors:
+  batch:
+  
+exporters:
+  logging:
+    loglevel: debug
+
+  otlphttp:
+    endpoint: http://10.132.143.56:4318
+
+      
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, otlphttp]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging]
+
+
